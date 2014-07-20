@@ -41,7 +41,7 @@ Use grsec
 FreeBSD-specific recommendations
 ================================
 
-Disable ptrace(2)
+Disable ptrace(2), procfs(5), ktrace(2), hwpmc(4) and other debugging primitives.
 -----------------
 
 ```bash
