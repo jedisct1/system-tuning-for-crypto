@@ -7,14 +7,35 @@ Generic recommendations
 Disable swap partitions
 -----------------------
 
+#### Windows
+
+1. Navigate to the `Control Panel` and click `System`
+2. Select `Advanced System Settings`
+3. In the `Advanced` tab under the `Performance` section, click `Settings`
+4. In the `Advanced` Tab under `Virtual Memory` section, click `Change`
+5. Untick `Automatically manage paging file size for all drives` 
+6. Select each drive listed and select the `No paging file` radio button for each.
+
 Disable core dumps
 ------------------
 
 Disable kernel crash dumps
 --------------------------
 
+#### Windows
+
+1. Navigate to the `Control Panel` and click `System`
+2. Select `Advanced System Settings`
+3. In the `Advanced` tab under the `Startup and Recovery` section, click `Settings`
+4. Under the `System Failure` section, change the `Write debugging information` drop down to `(none)`
+
 Disable hibernation/suspend-to-RAM
 ----------------------------------
+
+#### Windows
+
+1. Open a `Command Prompt` with Administrator privileges.
+2. Type `powercfg -h off` and hit enter.
 
 Run on bare metal
 -----------------
