@@ -69,3 +69,24 @@ Disable ptrace(2), procfs(5), ktrace(2), hwpmc(4) and other debugging primitives
 # sysctl -w security.bsd.unprivileged_proc_debug=0
 ```
 
+Windows specific recommendations
+================================
+
+Disable sending data to Microsoft
+---------------------------------
+
+All registry entries are `DWORD` and under the `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\` key.
+
+Location | Name | Value
+:--- | :--- | :--- | :---
+PCHealth\ErrorReporting\ | DoReport | 0
+SQMClient\Windows\ | CEIPEnable | 0
+Windows Defender\Spynet\ | SpyNetReporting | 0
+Windows\AppCompat\ | DisableInventory | 1
+Windows\AppCompat\ | DisablePcaUI | 0
+Windows\ScriptedDiagnosticsProvider\Policy\ | EnableQueryRemoteServer | 0
+Windows\System\ | EnableSmartScreen | 0
+Windows\WDI\{9c5a40da-b965-4fc3-8781-88dd50a6299d}\ | ScenarioExecutionEnabled | 0
+Windows\Windows Error Reporting\ | AutoApproveOSDumps | 0
+Windows\Windows Error Reporting\ | Disabled | 1
+Windows\Windows Error Reporting\ | DontSendAdditionalData | 1
