@@ -25,7 +25,7 @@ The performance impact is negligible on modern hardware.
 
 #### Windows
 
-1. Open a command prompt or Windows Powershell
+1. Open an elevated command prompt or an elevated Windows Powershell instance
 2. Type: `fsutil behavior set encryptpagingfile 1`
 
 Disable core dumps
