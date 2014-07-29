@@ -16,6 +16,18 @@ Disable swap partitions
 5. Untick `Automatically manage paging file size for all drives` 
 6. Select each drive listed and select the `No paging file` radio button for each.
 
+Encrypt swap partitions
+-----------------------
+
+As an alternative, if your operating system supports this feature,
+swap partitions can be encrypted with a key that is only stored in RAM.
+The performance impact is negligible on modern hardware.
+
+#### Windows
+
+1. Open a command prompt or Windows Powershell
+2. Type: `fsutil behavior set encryptpagingfile 1`
+
 Disable core dumps
 ------------------
 
