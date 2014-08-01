@@ -62,10 +62,6 @@ Linux-specific recommendations
 Disable ptrace(2) capability
 ----------------------------
 
-```bash
-# lcap CAP_SYS_PTRACE
-```
-
 Use CPU affinity
 ----------------
 
