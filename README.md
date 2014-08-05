@@ -132,14 +132,16 @@ Side-channels attacks extract sensitive data from information leaked by implemen
 
 Perhaps the most common side-channel is caused by non-constant time comparisons of passwords and secret keys:
 
+```python
     if user_entered_password == stored_password:
         allow_access()
     else:
         disallow_access()
+```
 
 This is how Python actually performs the strings comparison:
 
-<code>
+```c
     if (Py_SIZE(a) == Py_SIZE(b) &&
         a->ob_sval[0] == b->ob_sval[0] &&
         memcmp(a->ob_sval, b->ob_sval, Py_SIZE(a)) == 0) {
@@ -147,7 +149,7 @@ This is how Python actually performs the strings comparison:
     } else {
         result = Py_False;
     }
-</code>
+```
 
 If the strings do not have the same length, the function directly returns `False` without any further processing.
 
@@ -157,7 +159,7 @@ Eventually, the memcmp() function is called in order to compare the the entire s
 
 Here is an implementation of this function (OpenBSD/amd64):
 
-<code>
+```c
     int memcmp(const void *s1, const void *s2, size_t n)
     {
         if (n != 0) {
@@ -169,7 +171,7 @@ Here is an implementation of this function (OpenBSD/amd64):
         }
         return (0);
     }
-</code>
+```
 
 Bytes are compared one by one, and the function returns as soon as one
 difference is found.
