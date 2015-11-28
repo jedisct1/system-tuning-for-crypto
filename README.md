@@ -114,7 +114,7 @@ for each.
 
 On UNIX systems, interactive shells are often configured to store all the commands that have been typed into files named `~/.zsh_history` (zsh), `~/.bash_history` (bash) or `~/.sh_history` (ksh).
 
-Do these commands include confidential data? Then definitely can, especially since applications accepting passwords on the command-line are fairly common. The OpenSSL command-line tool, the `ssh-keygen` command and the MySQL client are some common examples of tools
+Do these commands include confidential data? They definitely can, especially since applications accepting passwords on the command-line are fairly common. The OpenSSL command-line tool, the `ssh-keygen` command and the MySQL client are some common examples of tools
 where important passwords can be given on the command-line.
 And a copy of these passwords eventually get recorded into the history shell commands.
 
