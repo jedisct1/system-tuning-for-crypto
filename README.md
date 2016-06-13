@@ -202,6 +202,8 @@ This attack is still relevant today, even when the processes are running in diff
 More recently, Apecechea, Inci, Eisenbarth and Sunar demonstrated that [cross-VM attacks are possible](http://eprint.iacr.org/2014/248.pdf).
 Their clever attack was conducted on VMWare, as well as the Xen hypervisor used by many virtual machines providers such as Amazon (EC2).
 
+More recently, cache attacks were conducted on EC2 instances to perform [cross-VM RSA key recovery](https://eprint.iacr.org/2016/596.pdf).
+
 And [In a previous study](http://cseweb.ucsd.edu/~hovav/dist/cloudsec.pdf), Ristenpart, Tromer, Shacham and Savage showed that with little effort and money, an attacker can get an instance assigned to the same physical machine as the target.
 
 These attacks remain fairly difficult to conduct, but considering the level of sophistication of some targeted cyber espionage operations we have seen in the past, they should definitely not be ignored.
